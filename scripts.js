@@ -42,7 +42,7 @@ function updateCountdown() {
   const minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
   const seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
 
-  if (hours == Math.floor(0) && minutes == Math.floor(10) && seconds == Math.floor(0)){
+  if ((minutes<= Math.floor(10)) || hours == Math.floor(0) && minutes <= Math.floor(10) && seconds == Math.floor(0)){
     alertElement.classList.add("active");
     alertElement.innerHTML = `
       <div class="alert_content">SEU TEMPO JÁ ESTA TERMINANDO, SE PREPARE PARA FINALIZAR</div>
@@ -61,3 +61,16 @@ function updateCountdown() {
 
 updateCountdown();
 setInterval(updateCountdown, 1000);
+
+function updateClock() {
+    const now = new Date();
+    const options = { timeZone: 'America/Sao_Paulo', hour12: false };
+    const timeString = now.toLocaleTimeString('en-US', options);
+
+    const timeElement = document.getElementById('time');
+    timeElement.textContent = timeString;
+
+    requestAnimationFrame(updateClock);
+}
+
+updateClock();

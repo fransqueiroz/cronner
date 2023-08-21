@@ -17,19 +17,19 @@ body {
     width: 100%;
   }
 
-  .countdown-item {
+.countdown-item {
     font-size: 25rem;
     margin: 0 10px;
-  }
+}
 
-  #days{
+#days{
     display: none;
-  }
+}
 
-  .alert_user{
+.alert_user{
     width:85%;
-  }
-  .alert_content {
+}
+.alert_content {
     background:red;
     padding:40px;
     display:flex;
@@ -38,24 +38,24 @@ body {
     font-size: 4.5rem;
     text-align: center;
     animation: pulse 2s infinite;
-  }
+}
 
-  @keyframes pulse {
-      0% {
-          transform: scale(0.95);
-          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
-      }
+@keyframes pulse {
+    0% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+    }
 
-      70% {
-          transform: scale(1);
-          box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
-      }
+    70% {
+        transform: scale(1);
+        box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+    }
 
-      100% {
-          transform: scale(0.95);
-          box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
-      }
-  }
+    100% {
+        transform: scale(0.95);
+        box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+    }
+}
 
   .alert_user{
     display: none;
@@ -64,3 +64,12 @@ body {
     display: flex;
     justify-content: center;
   }
+.clock {
+    display:flex;
+    justify-content:space-around;
+    padding: 25px;
+    font-size: 1.5rem;
+}
+.clock .time_now{
+    margin-right:10px
+}
